@@ -1,0 +1,56 @@
+/* Online Kotlin Compiler */
+open class Animal(var color: String, var size: Int) {
+    fun eat(food: String) {
+        println("eat: $food")
+    }
+
+    fun sleep(hours: String) {
+        println("sleep :$hours")
+    }
+}
+
+class Dog(color: String, size: Int) : Animal(color, size) {
+    fun woof() {
+        println("Dog makes the sound woof")
+    }
+}
+
+class Cat(color: String, size: Int) : Animal(color, size) {
+    fun meow() {
+        println("Cat makes the sound meow")
+    }
+}
+
+fun main() {
+    val d = Dog("black", 5)
+            d.woof()
+            d.eat("bone")
+            d.sleep("2 hr")
+
+            val c = Cat("brown", 2)
+                    c.meow()
+                    c.eat("fish")
+                    c.sleep("1 hr")
+}
+ UML:
++---------------------------------+
+|            Animal             |
++---------------------------------+
+| color: String                 |
+| size: Int                     |
++---------------------------------+
+| eat(food: String)             |
+| sleep(hours: String)          |
++---------------------------------+
+             ^
+             |
+             |
+        +----+----+
+        |         |
++----------------+  +----------------+
+|      Dog       |  |      Cat       |
++----------------+  +----------------+
+|                |  |                |
+|                |  |                |
+| woof()         |  | meow()         |
++----------------+  +----------------+
