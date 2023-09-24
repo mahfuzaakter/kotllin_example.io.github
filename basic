@@ -1,0 +1,54 @@
+/* Online Kotlin Compiler */
+fun main() {
+    val cars = arrayOf("Volvo", "BMW", "Ford", "Mazda")
+    println(cars[0])
+    println(cars.size)
+cars[0] = "Opel"
+println(cars[0])
+if ("Volvo" in cars) {
+println("It exists!")
+} else {
+println("It does not exist.")
+}
+
+for (x in cars) {
+println(x)
+}
+
+val day = 7
+val result = when (day) {
+1 -> "Monday"
+2 -> "Tuesday"
+3 -> "Wednesday"
+4 -> "Thursday"
+5 -> "Friday"
+6 -> "Saturday"
+7 -> "Sunday"
+else -> "Invalid day."
+}
+println(result)
+var i = 0
+while (i < 5) {
+println(i)
+i++
+}
+var j= 0
+while (j < 10) {
+println(j)
+j++
+if (j == 4) {
+break
+}
+}
+
+var k = 0
+while (k < 12) {
+if (k == 5) {
+k++
+continue
+}
+println(k)
+k++
+}
+
+}
