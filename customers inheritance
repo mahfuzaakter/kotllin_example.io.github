@@ -1,0 +1,19 @@
+open class customers(var name:string,var address:string, var pnum: string)
+class product( items: string, price:double):customers(name, address,pnum){
+    println("show product item list:")
+}
+class shopping_cart(item:string):product(items,price){
+    fun add(item:string){
+        println("added item list:")
+    }
+    fun order(item:steing){
+        println("ordered item list")
+    }
+}
+fun main(){
+    var p=product("pen",10,"book",100)
+    var cart=shopping_cart("pen",10,"book",100)
+    cart.add()
+    cart.order()
+    var cus1=customers("rahim","dsc","012345")
+}
